@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>My Portfolio</title>
     <style>
 
@@ -12,12 +13,23 @@
         font-size:12px;
 
         }
-        h2,h3{
+        #fullName,#bio,#chk,#my_pro{
         color:#191970;
         }
-        h4{
+        #username{
+        color:#191970;
+        }
+
+        #githublink,#repolink{
         color:red;
         }
+        #githublink:hover{
+        color:black;
+        }
+        #repolink:hover{
+        color:black;
+        }
+
 
 
     </style>
@@ -32,13 +44,19 @@
      width="200"
      border="1px"
      alt="image not found"
-    id="profileImage">
-<h2 id="fullName"></h2>
- <h4 id="username"></h4>
+     id="profileImage"
+>
 
-<h3 id="bio"></h3>
-    <h3>Check me on <a id="githublink" >link</a></h3>
-    <h3 id ="projects">My Projects</h3>
+    <h2 id="fullName"></h2>
+    <h4 id="username"></h4>
+
+    <h3 id="bio"></h3>
+    <h3 id="chk">Check me on: <a id="githublink" >link</a></h3>
+    <h3 id="my_pro" style="color:#191970">My Projects:
+
+       <a id="repolink">repo_link</a><br>
+    </h3>
+    <h3 id="loc" style="color:#191970;"><i class="fa fa-map-marker" style="font-size:30px;color:red"></i>Nepal</h3>
 </div>
 
 
@@ -53,11 +71,10 @@
     document.getElementById('username').textContent = data['login']
     document.getElementById('bio').textContent = data['bio']
     document.getElementById('githublink').href = data['html_url']
-    document.getElementById('projects').textContent = data['repos_url']
+    document.getElementById('repolink').href = data['html_url']
+    document.getElementById('loc').href = data['location']
     document.getElementById('mainContainer').hidden = false
     document.getElementById('loading').hidden = true
-
-
 
     })
 </script>
