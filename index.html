@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html"
+      xmlns:https="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -29,10 +30,13 @@
         #repolink:hover{
         color:black;
         }
+      table, th, td {
+       color:#191970;
+       border: 1px solid red;
+        }
 
 
-
-    </style>
+ </style>
 </head>
 <body>
 <div id="loading">
@@ -52,14 +56,67 @@
 
     <h3 id="bio"></h3>
     <h3 id="chk">Check me on: <a id="githublink" >link</a></h3>
-    <h3 id="my_pro" style="color:#191970">My Projects:
-
-       <a id="repolink">repo_link</a><br>
+    <h3 id="my_pro">My Projects:
+       <a id="repolink">repo_link</a>
     </h3>
     <h3 id="loc" style="color:#191970;"><i class="fa fa-map-marker" style="font-size:30px;color:red"></i>Nepal</h3>
+<div id="tab">
+<table>
+  <thead>
+  <tr>
+    <th>Projects</th>
+    <th id="link1">Link</th>
+  </tr>
+   </thead>
+   <tbody>
+   <tr>
+    <td>academy1 </td>
+    <td><a href="github.com/shah014/academy1">link_1</a></td>
+  </tr>
+
+ <tr>
+    <td>academyday</td>
+    <td>github.com/shah014/academyday</td>
+  </tr>
+      <tr>
+    <td>insight1</td>
+    <td>github.com/shah014/insight1</td>
+  </tr>
+      <tr>
+    <td>IW</td>
+    <td>github.com/shah014/IW</td>
+  </tr>
+      <tr>
+    <td>rojgar</td>
+    <td>github.com/shah014/rojgar</td>
+  </tr>
+   </tbody>
+</table>
+
+</div>
 </div>
 
+<!----------------table to show repos----------------------------------------------------------------------------
 
+    <div class="container-fluid mt-3">
+
+    </div>
+    <div class="table-responsive">
+        <table class="table table-bordered">
+        <thead>
+        <tr class= "table-info">
+            <th scope = "col">Repo_name</th>
+            <th scope="col">url</th>
+        </tr>
+        </thead>
+        <tbody>
+        </tbody>
+        </table>
+       </div>
+
+       </div>
+       ----------------------------------------------------------------------------------------------------->
+<!--------------------------------------------------------------------------------------------------------------->
 
 <script>
     fetch("https://api.github.com/users/shah014")
@@ -71,12 +128,13 @@
     document.getElementById('username').textContent = data['login']
     document.getElementById('bio').textContent = data['bio']
     document.getElementById('githublink').href = data['html_url']
-    document.getElementById('repolink').href = data['html_url']
+   document.getElementById('repolink').href = data['html_url']
     document.getElementById('loc').href = data['location']
     document.getElementById('mainContainer').hidden = false
     document.getElementById('loading').hidden = true
-
     })
 </script>
+
+
 </body>
 </html>
