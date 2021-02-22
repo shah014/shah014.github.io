@@ -1,18 +1,18 @@
+
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html"
       xmlns:https="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>My Portfolio</title>
     <style>
 
         .main{
-        margin-top:45px;
+        margin-top:18px;
         text-align: center;
         font-family:sans-serif;
         font-size:12px;
-
         }
         #fullName,#bio,#chk,#my_pro{
         color:#191970;
@@ -23,6 +23,7 @@
 
         #githublink,#repolink{
         color:red;
+        text-decoration:none;
         }
         #githublink:hover{
         color:black;
@@ -30,11 +31,24 @@
         #repolink:hover{
         color:black;
         }
-      table, th, td {
-       color:#191970;
-       border: 1px solid red;
-        }
 
+       table, th, td{
+       width:300px;
+       height:45px;
+       color:#191970;
+       border: 1px solid #191970;
+       }
+       a{
+       color:red;
+       text-decoration:none;
+       }
+      a:hover{
+      color:white;
+      }
+
+      td:hover{
+      background-color:#33BBFF;
+      }
 
  </style>
 </head>
@@ -57,66 +71,44 @@
     <h3 id="bio"></h3>
     <h3 id="chk">Check me on: <a id="githublink" >link</a></h3>
     <h3 id="my_pro">My Projects:
-       <a id="repolink">repo_link</a>
+    <a id="repolink">repo_link</a>
     </h3>
-    <h3 id="loc" style="color:#191970;"><i class="fa fa-map-marker" style="font-size:30px;color:red"></i>Nepal</h3>
-<div id="tab">
-<table>
+   <h3 id="loc" style="color:#191970;"><i class="fa fa-map-marker" style="font-size:25px;color:red"></i>Nepal</h3>
+    <div id="tab">
+   <table align="center">
+    <h2 style="color:#191970;"><u>My Projects:</u></h2>
   <thead>
-  <tr>
-    <th>Projects</th>
-    <th id="link1">Link</th>
+  <tr style="background-color:#33FF74">
+      <th><h3>Projects</h3></th>
+      <th id="link1"><h3>Link</h3></th>
   </tr>
    </thead>
    <tbody>
    <tr>
     <td>academy1 </td>
-    <td><a href="github.com/shah014/academy1">link_1</a></td>
+    <td><a href="https://github.com/shah014/academy1">link</a></td>
   </tr>
 
  <tr>
     <td>academyday</td>
-    <td>github.com/shah014/academyday</td>
+    <td><a href="https://github.com/shah014/academyday">link</a></td>
   </tr>
       <tr>
     <td>insight1</td>
-    <td>github.com/shah014/insight1</td>
-  </tr>
-      <tr>
-    <td>IW</td>
-    <td>github.com/shah014/IW</td>
+    <td><a href="https://github.com/shah014/insight">link</a></td>
   </tr>
       <tr>
     <td>rojgar</td>
-    <td>github.com/shah014/rojgar</td>
+    <td><a href="https://github.com/shah014/rojgar">link</a></td>
   </tr>
    </tbody>
 </table>
 
 </div>
+    <a class="twitter-timeline" data-width="400" data-height="300" href="https://twitter.com/TwitterDev?ref_src=twsrc%5Etfw">Tweets by TwitterDev</a>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </div>
 
-<!----------------table to show repos----------------------------------------------------------------------------
-
-    <div class="container-fluid mt-3">
-
-    </div>
-    <div class="table-responsive">
-        <table class="table table-bordered">
-        <thead>
-        <tr class= "table-info">
-            <th scope = "col">Repo_name</th>
-            <th scope="col">url</th>
-        </tr>
-        </thead>
-        <tbody>
-        </tbody>
-        </table>
-       </div>
-
-       </div>
-       ----------------------------------------------------------------------------------------------------->
-<!--------------------------------------------------------------------------------------------------------------->
 
 <script>
     fetch("https://api.github.com/users/shah014")
