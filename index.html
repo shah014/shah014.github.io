@@ -1,5 +1,7 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html"
+      xmlns:https="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -7,7 +9,7 @@
     <style>
 
         .main{
-        margin-top:45px;
+        margin-top:18px;
         text-align: center;
         font-family:sans-serif;
         font-size:12px;
@@ -22,6 +24,7 @@
 
         #githublink,#repolink{
         color:red;
+        text-decoration:none;
         }
         #githublink:hover{
         color:black;
@@ -30,9 +33,21 @@
         color:black;
         }
 
+       table, th, td{
+       width:200px;
+       height:45px;
+       color:#191970;
+       border: 1px solid #191970;
+        }
+      a{
+      color:red;
+      text-decoration:none;
+      }
+     a:hover{
+     color:black;
+     }
 
-
-    </style>
+ </style>
 </head>
 <body>
 <div id="loading">
@@ -52,14 +67,68 @@
 
     <h3 id="bio"></h3>
     <h3 id="chk">Check me on: <a id="githublink" >link</a></h3>
-    <h3 id="my_pro" style="color:#191970">My Projects:
-
-       <a id="repolink">repo_link</a><br>
+    <h3 id="my_pro">My Projects:
+    <a id="repolink">repo_link</a>
     </h3>
     <h3 id="loc" style="color:#191970;"><i class="fa fa-map-marker" style="font-size:30px;color:red"></i>Nepal</h3>
+    <div id="tab">
+   <table align="center">
+    <h2 style="color:#191970;"><u>My Projects List:</u></h2>
+  <thead>
+  <tr>
+      <th><h3>Projects</h3></th>
+      <th id="link1"><h3>Link</h3></th>
+  </tr>
+   </thead>
+   <tbody>
+   <tr>
+    <td>academy1 </td>
+    <td><a href="https://github.com/shah014/academy1">link</a></td>
+  </tr>
+
+ <tr>
+    <td>academyday</td>
+    <td><a href="https://github.com/shah014/academyday">link</a></td>
+  </tr>
+      <tr>
+    <td>insight1</td>
+    <td><a href="https://github.com/shah014/insight">link</a></td>
+  </tr>
+      <tr>
+    <td>IW</td>
+    <td><a href="https://github.com/shah014/IW">link</a></td>
+  </tr>
+      <tr>
+    <td>rojgar</td>
+    <td><a href="https://github.com/shah014/rojgar">link</a></td>
+  </tr>
+   </tbody>
+</table>
+
+</div>
 </div>
 
+<!----------------table to show repos----------------------------------------------------------------------------
 
+    <div class="container-fluid mt-3">
+
+    </div>
+    <div class="table-responsive">
+        <table class="table table-bordered">
+        <thead>
+        <tr class= "table-info">
+            <th scope = "col">Repo_name</th>
+            <th scope="col">url</th>
+        </tr>
+        </thead>
+        <tbody>
+        </tbody>
+        </table>
+       </div>
+
+       </div>
+       ----------------------------------------------------------------------------------------------------->
+<!--------------------------------------------------------------------------------------------------------------->
 
 <script>
     fetch("https://api.github.com/users/shah014")
@@ -71,12 +140,13 @@
     document.getElementById('username').textContent = data['login']
     document.getElementById('bio').textContent = data['bio']
     document.getElementById('githublink').href = data['html_url']
-    document.getElementById('repolink').href = data['html_url']
+   document.getElementById('repolink').href = data['html_url']
     document.getElementById('loc').href = data['location']
     document.getElementById('mainContainer').hidden = false
     document.getElementById('loading').hidden = true
-
     })
 </script>
+
+
 </body>
 </html>
